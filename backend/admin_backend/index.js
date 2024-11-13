@@ -147,6 +147,17 @@ app.get("/get-payments", async (req, res) => {
     }
 });
 
+app.get("/get-user-count", async (req, res) => {
+    try {
+        const [rows] = await db.query("SELECT getUserCount() AS user_count");
+        const userCount = rows[0].user_count;
+        res.status(200).json({ userCount });
+    } catch (error) {
+        console.error("Error fetching number of users:", error);
+        res.status(500).send(error);
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 })

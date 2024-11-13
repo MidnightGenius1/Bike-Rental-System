@@ -151,3 +151,18 @@ BEGIN
 END //
 
 DELIMITER ;
+
+DELIMITER //
+
+CREATE FUNCTION getUserCount()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE user_count INT;
+    
+    SELECT COUNT(*) INTO user_count FROM `user`;
+    
+    RETURN user_count;
+END //
+
+DELIMITER ;
