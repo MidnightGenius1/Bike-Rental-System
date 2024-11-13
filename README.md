@@ -7,10 +7,10 @@ You will need MySQL and node to run this application. To start off the applicati
 
 - Open three terminals
 - They should be opened for **admin_backend** and **user_backend** folders in the **backend** folder
-- These can be accessed by **cd .\backend\admin_backend\** and **cd .\backend\user_backend\** respectively
+- These can be accessed by ***cd .\backend\admin_backend\*** and ***cd .\backend\user_backend\*** respectively
 - Run **npm i** in both terminals to download and install the required libraries
 - Run **node index.js** or **nodemon index.js**, depending on whether you have installed **nodemon** library, in both terminals
-- The third terminal should be used to run the frontend, which can be accessed by **cd .\frontend\**
+- The third terminal should be used to run the frontend, which can be accessed by ***cd .\frontend\***
 - Run the application by **npm start**
 - This should start the complete web application, assuming you have completed the above requirements to set up the backend
 
