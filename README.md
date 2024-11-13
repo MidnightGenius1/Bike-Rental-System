@@ -36,4 +36,4 @@ The system uses the following database tables:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MidnightGenius1/bike-rental-system.git
+   git clone https://github.com/MidnightGenius1/Bike-Rental-System.git
