@@ -15,6 +15,7 @@ function AdminBikes() {
     const fetchBikes = async () => {
       try {
         const response = await axios.get(`${API_URL}/bike-status`);
+        console.log(response);
         setBikes(response.data);
       } catch (error) {
         console.error("Error fetching bike list:", error);
@@ -77,6 +78,7 @@ function AdminBikes() {
             <tr style={{ width: "5%" }}>
               <th style={{ width: "5%" }}>Bike Name</th>
               <th style={{ width: "5%" }}>Price per day (₹)</th>
+              <th style={{ width: "5%" }}>Current Location</th>
               <th style={{ width: "25px" }}>Status</th>
             </tr>
           </thead>
@@ -89,6 +91,7 @@ function AdminBikes() {
               >
                 <td style={{ width: "5%" }}>{bike.bike_name}</td>
                 <td style={{ width: "5%" }}>{bike.price}</td>
+                <td style={{ width: "5%" }}>{bike.address}</td>
                 <td
                   style={{ width: "0.5%" }}
                   className={
