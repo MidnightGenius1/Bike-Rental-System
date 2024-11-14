@@ -43,9 +43,19 @@ app.post("/admin-login", async (req, res) => {
 });
 
 app.get("/bike-status", async (req, res) => {
-    const [bikes] = await db.query("SELECT * FROM bike");
-    res.send(bikes);
-});
+    try {
+      const [bikes] = await db.query(`
+        SELECT bike.*, location.address 
+        FROM bike
+        JOIN location ON bike.bike_id = location.location_id
+      `);
+      res.send(bikes);
+    } catch (error) {
+      console.error("Error fetching bike status with location:", error);
+      res.status(500).send(error);
+    }
+  });
+  
 
 app.get("/rental-details/:bike_id", async (req, res) => {
     try {
