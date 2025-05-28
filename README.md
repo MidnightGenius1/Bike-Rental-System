@@ -26,8 +26,8 @@ A bike rental system where users can rent bikes, make payments, and track their 
 
 ## Tech Stack
 - **Backend**: MySQL for database management
-- **Frontend**: (Optional: React, HTML, CSS, or other technologies you are using)
-- **Server**: (Optional: Node.js, Python, etc.)
+- **Frontend**: (ReactJS, HTML, CSS)
+- **Server**: (Express.js, Node.js)
 - **Version Control**: GitHub for source code management
 
 ## Database Schema
